@@ -104,8 +104,8 @@ function wpToHtml(wp) {
 		},
 	}
 
-	var header = "<html><head></head><body>";
-	var footer = "</body></html>";
+	var header = '<html><head><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="test/css" href="./neat.css"></head><body><div class="page">';
+	var footer = "</div></body></html>";
 
 	var output = header;
 
