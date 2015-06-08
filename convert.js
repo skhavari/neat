@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/local/bin/node
 
 var Promise = require("bluebird");
 var _ = require('underscore');
