@@ -12,6 +12,7 @@
     "bluebird": "^2.9.27",
     "escape-html": "^1.0.2",
     "fs-extra": "^0.18.4",
+    "html-minifier": "^0.7.2",
     "minimist": "^1.1.1",
     "true-html-escape": "0.0.2",
     "underscore": "^1.8.3",

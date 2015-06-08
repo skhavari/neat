@@ -9,6 +9,7 @@ var xml2js = Promise.promisifyAll(require("xml2js"));
 var unzip = require('unzip');
 var util = require('util');
 var escaper = require('true-html-escape');
+var minify = require('html-minifier').minify;
 
 var usage = " Usage: convert.js -f <filename.docx>";
 
@@ -169,7 +170,7 @@ function wpToHtml(wp) {
 		output += footer;
 
 		console.log("Finished converting wordprocessingML to HTML");
-		resolve(output);
+		resolve(minify(output));
 	});
 }
 
