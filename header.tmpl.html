@@ -1,0 +1,371 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <style>
+    html {
+        height: 100%;
+    }
+    
+    body {
+        height: calc(100% - 58px);
+    }
+    
+    body:after {
+        content: "";
+        height: 22px;
+        display: block;
+    }
+    
+    #article {
+        min-height: 100%;
+    }
+    /* End of rules responsible for the Reader page expanding to fill the window. */
+    
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        -webkit-user-select: none;
+        overflow-x: hidden;
+    }
+    
+    .cached embed,
+    .cached applet,
+    .cached object {
+        display: none !important;
+    }
+    
+    #article {
+        background: rgb(251, 251, 251);
+        background-size: 640px 254px;
+        max-width: 800px;
+        margin: 22px auto 0 auto;
+        padding-top: 12px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+        overflow-x: hidden;
+        z-index: 0;
+        outline: none;
+        pointer-events: auto;
+        -webkit-user-select: auto;
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+    
+    .page-number {
+        display: none;
+    }
+    
+    .page:only-of-type .page-number {
+        display: none;
+    }
+    
+    .page-number {
+        display: block;
+        font: bold 11px Helvetica, sans-serif;
+        color: #aaaaaa;
+        position: absolute;
+        right: 50px;
+        top: 15px;
+        -webkit-user-select: none;
+        cursor: default;
+        text-align: right;
+    }
+    
+    .page {
+        max-width: 658px;
+        margin-left: auto;
+        margin-right: auto;
+        color: rgb(65, 65, 65);
+        /*padding: 45px 53px;*/
+        
+        position: relative;
+        overflow: hidden;
+        transition: height .5s ease-out;
+        border-bottom: 1px solid rgb(206, 206, 206);
+        margin-right: 17px;
+        margin-left: 17px;
+        font-family: Georgia, Palatino, Times, 'Times New Roman', serif;
+        font-size: 18px;
+        line-height: 28px;
+    }
+    
+    .page:last-of-type {
+        border-bottom: none;
+    }
+    
+    #incoming-page-placeholder {
+        height: 30px;
+        margin-bottom: 0;
+    }
+    
+    #incoming-page-corner {
+        position: absolute;
+        right: 10px;
+        top: 8px;
+    }
+    
+    #incoming-page-text {
+        float: right;
+        margin-top: 2px;
+        margin-left: 8px;
+        color: #B2B2B2;
+        font: bold 11px Helvetica, sans-serif;
+        -webkit-user-select: none;
+    }
+    
+    #next-page-container {
+        position: absolute;
+        display: none;
+    }
+    
+    #controls {
+        position: absolute;
+        margin: 7px 0 0 56px;
+        padding: 0;
+        -webkit-user-select: none;
+        z-index: 100;
+    }
+    
+    #controls * {
+        float: left;
+    }
+    
+    #controls button {
+        display: block;
+        border: 0;
+        padding: 0;
+        width: 35px;
+        height: 28px;
+        background-size: 13px 14px;
+        background-repeat: no-repeat;
+        background-color: transparent;
+    }
+    
+    #controls .separator {
+        display: block;
+        width: 1px;
+        height: 14px;
+        margin: 7px 0;
+        background-size: 1px 14px;
+        background-image: url(safari-resource:/ReaderResizeSeparator.png);
+    }
+    
+    #zoom-out {
+        background-image: url(safari-resource:/ReaderResizeSmall.png);
+        background-position: 14px 7px;
+    }
+    
+    #zoom-in {
+        background-image: url(safari-resource:/ReaderResizeLarge.png);
+        background-position: 8px 7px;
+    }
+    
+    #zoom-out,
+    #zoom-in {
+        opacity: 0.48;
+    }
+    
+    #zoom-out:hover,
+    #zoom-in:hover {
+        opacity: 0.64;
+    }
+    
+    #zoom-out:active,
+    #zoom-in:active {
+        opacity: 0.85;
+    }
+    
+    .no-transition {
+        transition: none !important;
+    }
+    
+    h1 {
+        font-size: 1.25em;
+    }
+    
+    h2 {
+        font-size: 1.125em;
+    }
+    
+    h3 {
+        font-size: 1.05em;
+    }
+    
+    h4,
+    h5,
+    h6 {
+        font-size: 1em;
+        margin: 1em 0;
+    }
+    
+    figure {
+        margin: 0;
+    }
+    
+    .page.rtl {
+        direction: rtl;
+    }
+    
+    #article {
+        text-rendering: optimizeLegibility;
+    }
+    
+    #article pre {
+        white-space: pre-wrap;
+    }
+    
+    #article * {
+        /* Scale down anything larger than our view. Max-width maintains aspect ratios on images. */
+        
+        max-width: 100%;
+    }
+    
+    #article img {
+        /* By default, images are centered on their own line. */
+        
+        margin: 0.5em auto;
+        display: block;
+        height: auto;
+    }
+    
+    #article img.reader-image-tiny {
+        display: inline;
+        margin: 0;
+    }
+    
+    #article .leading-image,
+    figure,
+    .auxiliary {
+        margin-bottom: .25em;
+    }
+    
+    #article .leading-image img {
+        margin: auto;
+        display: block;
+        clear: both;
+    }
+    
+    #article .leading-image .credit {
+        margin: 0;
+        text-align: right;
+    }
+    
+    #article .leading-image .caption,
+    #article .leading-image .credit,
+    #article figcaption,
+    #article .auxiliary figcaption {
+        font-size: 0.75em;
+        line-height: 1.5em;
+        margin-top: 1em;
+        width: 100%;
+    }
+    
+    #article .leading-image .credit + .caption {
+        margin-top: 0.1em;
+    }
+    
+    #article .auxiliary {
+        display: block;
+        clear: both;
+        font-size: 0.75em;
+        line-height: 1.4em;
+        text-align: start;
+    }
+    
+    #article .auxiliary > * {
+        -webkit-margin-start: 0;
+    }
+    
+    #article .auxiliary img,
+    #article .auxiliary > *:first-child {
+        margin: 0;
+    }
+    /* If the element immediately after an image is inline, it might bump up against the image. */
+    
+    #article .auxiliary img + * {
+        display: block;
+    }
+    
+    #article .auxiliary figcaption {
+        font-size: 100%;
+    }
+    
+    #article .auxiliary * {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    
+    #article .float.left {
+        float: left;
+        margin-right: 20px;
+    }
+    
+    #article .float.right {
+        float: right;
+        margin-left: 20px;
+    }
+    
+    #article .clear {
+        clear: both;
+    }
+    
+    #article ul.list-style-type-none,
+    #article ol.list-style-type-none,
+    #article .list-style-type-none > li {
+        list-style-type: none;
+        -webkit-padding-start: 0;
+    }
+    
+    li {
+        padding-left: 30px;
+        padding-bottom: 10px;
+        list-style-type: disc;
+        list-style-position: inside;
+        text-indent: -20px;
+    }
+    /* Collapse excess whitespace. */
+    
+    .page p > p:empty,
+    .page div > p:empty,
+    .page p > div:empty,
+    .page div > div:empty,
+    .page p + br,
+    .page p > br:only-child,
+    .page div > br:only-child,
+    .page img + br {
+        display: none;
+    }
+    
+    .title {
+        display: none;
+    }
+    
+    .page:first-of-type .title {
+        display: block;
+    }
+    
+    .page table {
+        font-size: 0.9em;
+        text-align: start;
+        word-wrap: break-word;
+        border-collapse: collapse;
+    }
+    
+    .page table td,
+    .page table th {
+        padding: 0.25em 0.5em;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .page table th {
+        background-color: rgba(0, 0, 0, 0.025);
+    }
+    
+    .page a {
+        text-decoration: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">

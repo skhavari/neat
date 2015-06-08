@@ -15,6 +15,9 @@ var usage = " Usage: convert.js -f <filename.docx>";
 var args = require('minimist')(process.argv.slice(2));
 var filename = args.f;
 
+var header = fs.readFileSync("./header.tmpl.html");
+var footer = fs.readFileSync("./footer.tmpl.html");
+
 if (!_.isString(filename)) {
 	console.log(usage);
 	process.exit(0);
@@ -103,9 +106,6 @@ function wpToHtml(wp) {
 			end: "</h5>"
 		},
 	}
-
-	var header = '<html><head><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="test/css" href="./neat.css"></head><body><div class="page">';
-	var footer = "</div></body></html>";
 
 	var output = header;
 
