@@ -86,6 +86,10 @@ function wpToHtml(wp) {
 			start: "<h1>",
 			end: "</h1>"
 		},
+		"Title": {
+			start: "<h1>",
+			end: "</h1>"
+		},
 		"Heading1": {
 			start: "<h1>",
 			end: "</h1>"
