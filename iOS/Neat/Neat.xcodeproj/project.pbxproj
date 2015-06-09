@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A45B7331B276B6A0063DCB8 /* DocxParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A45B7321B276B6A0063DCB8 /* DocxParser.swift */; };
+		1A45B7361B2783390063DCB8 /* header.tmpl.html in Resources */ = {isa = PBXBuildFile; fileRef = 1A45B7351B2783390063DCB8 /* header.tmpl.html */; };
+		1A45B7381B27833F0063DCB8 /* footer.tmpl.html in Resources */ = {isa = PBXBuildFile; fileRef = 1A45B7371B27833F0063DCB8 /* footer.tmpl.html */; };
 		1ADF77021B2652E100866BB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADF77011B2652E100866BB2 /* AppDelegate.swift */; };
 		1ADF77071B2652E100866BB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADF77051B2652E100866BB2 /* Main.storyboard */; };
 		1ADF77091B2652E100866BB2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ADF77081B2652E100866BB2 /* Images.xcassets */; };
@@ -30,6 +33,9 @@
 
 /* Begin PBXFileReference section */
 		1A14B0BA1B269687009DB701 /* Neat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Neat-Bridging-Header.h"; sourceTree = "<group>"; };
+		1A45B7321B276B6A0063DCB8 /* DocxParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocxParser.swift; sourceTree = "<group>"; };
+		1A45B7351B2783390063DCB8 /* header.tmpl.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = header.tmpl.html; sourceTree = "<group>"; };
+		1A45B7371B27833F0063DCB8 /* footer.tmpl.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = footer.tmpl.html; sourceTree = "<group>"; };
 		1ADF76FC1B2652E100866BB2 /* Neat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ADF77001B2652E100866BB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1ADF77011B2652E100866BB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +72,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A45B7341B2783220063DCB8 /* HTML Templates */ = {
+			isa = PBXGroup;
+			children = (
+				1A45B7351B2783390063DCB8 /* header.tmpl.html */,
+				1A45B7371B27833F0063DCB8 /* footer.tmpl.html */,
+			);
+			name = "HTML Templates";
+			sourceTree = "<group>";
+		};
 		1ADF76F31B2652E100866BB2 = {
 			isa = PBXGroup;
 			children = (
@@ -90,14 +105,16 @@
 		1ADF76FE1B2652E100866BB2 /* Neat */ = {
 			isa = PBXGroup;
 			children = (
-				1ADF77011B2652E100866BB2 /* AppDelegate.swift */,
 				1ADF77051B2652E100866BB2 /* Main.storyboard */,
+				1ADF77011B2652E100866BB2 /* AppDelegate.swift */,
+				1A45B7321B276B6A0063DCB8 /* DocxParser.swift */,
 				1ADF77291B265D5700866BB2 /* FileViewerViewController.swift */,
 				1ADF77211B26533E00866BB2 /* FilesTableViewController.swift */,
-				1ADF77081B2652E100866BB2 /* Images.xcassets */,
-				1ADF770A1B2652E100866BB2 /* LaunchScreen.xib */,
-				1ADF76FF1B2652E100866BB2 /* Supporting Files */,
 				1A14B0BA1B269687009DB701 /* Neat-Bridging-Header.h */,
+				1ADF770A1B2652E100866BB2 /* LaunchScreen.xib */,
+				1ADF77081B2652E100866BB2 /* Images.xcassets */,
+				1A45B7341B2783220063DCB8 /* HTML Templates */,
+				1ADF76FF1B2652E100866BB2 /* Supporting Files */,
 			);
 			path = Neat;
 			sourceTree = "<group>";
@@ -226,6 +243,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A45B7361B2783390063DCB8 /* header.tmpl.html in Resources */,
+				1A45B7381B27833F0063DCB8 /* footer.tmpl.html in Resources */,
 				1ADF77281B26548C00866BB2 /* samples in Resources */,
 				1ADF77071B2652E100866BB2 /* Main.storyboard in Resources */,
 				1ADF770C1B2652E100866BB2 /* LaunchScreen.xib in Resources */,
@@ -282,6 +301,7 @@
 			files = (
 				1ADF772A1B265D5700866BB2 /* FileViewerViewController.swift in Sources */,
 				1ADF77021B2652E100866BB2 /* AppDelegate.swift in Sources */,
+				1A45B7331B276B6A0063DCB8 /* DocxParser.swift in Sources */,
 				1ADF77221B26533E00866BB2 /* FilesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
