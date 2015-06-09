@@ -56,8 +56,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Files" id="X2k-CK-N7b">
-                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="VZc-6d-t0k"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="VZc-6d-t0k">
+                            <connections>
+                                <action selector="onNeatPressed:" destination="pXA-GR-bQm" id="JJi-12-aFg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="neatButton" destination="VZc-6d-t0k" id="8V7-hP-WA6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="est-tH-TIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

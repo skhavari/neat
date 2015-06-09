@@ -1,0 +1,13 @@
+PODS:
+  - SSZipArchive (0.3.2)
+  - TBXML (1.5)
+
+DEPENDENCIES:
+  - SSZipArchive (~> 0.3.2)
+  - TBXML (~> 1.5)
+
+SPEC CHECKSUMS:
+  SSZipArchive: 11801759495fa4efb7512ef652eb0042d68305d7
+  TBXML: 9f9dadb239f2f2af1dadb87fe43a0ce6e479379a
+
+COCOAPODS: 0.37.2

@@ -15,6 +15,7 @@
 		1ADF77221B26533E00866BB2 /* FilesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADF77211B26533E00866BB2 /* FilesTableViewController.swift */; };
 		1ADF77281B26548C00866BB2 /* samples in Resources */ = {isa = PBXBuildFile; fileRef = 1ADF77271B26548C00866BB2 /* samples */; };
 		1ADF772A1B265D5700866BB2 /* FileViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADF77291B265D5700866BB2 /* FileViewerViewController.swift */; };
+		DC81ABCF96BDBF6AC56BC229 /* libPods-Neat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF9E7B902E14BB9D17F760BB /* libPods-Neat.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A14B0BA1B269687009DB701 /* Neat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Neat-Bridging-Header.h"; sourceTree = "<group>"; };
 		1ADF76FC1B2652E100866BB2 /* Neat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ADF77001B2652E100866BB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1ADF77011B2652E100866BB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +42,9 @@
 		1ADF77211B26533E00866BB2 /* FilesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesTableViewController.swift; sourceTree = "<group>"; };
 		1ADF77271B26548C00866BB2 /* samples */ = {isa = PBXFileReference; lastKnownFileType = folder; name = samples; path = ../../samples; sourceTree = "<group>"; };
 		1ADF77291B265D5700866BB2 /* FileViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileViewerViewController.swift; sourceTree = "<group>"; };
+		288D3299F0259D421267E9FD /* Pods-Neat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Neat/Pods-Neat.release.xcconfig"; sourceTree = "<group>"; };
+		EF9E7B902E14BB9D17F760BB /* libPods-Neat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Neat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F232F38A7B363A0B686548E9 /* Pods-Neat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Neat/Pods-Neat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC81ABCF96BDBF6AC56BC229 /* libPods-Neat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +73,8 @@
 				1ADF76FE1B2652E100866BB2 /* Neat */,
 				1ADF77141B2652E100866BB2 /* NeatTests */,
 				1ADF76FD1B2652E100866BB2 /* Products */,
+				2D1F931B8A910620B140B424 /* Pods */,
+				46DB2B60E71E5097D3DD3814 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +97,7 @@
 				1ADF77081B2652E100866BB2 /* Images.xcassets */,
 				1ADF770A1B2652E100866BB2 /* LaunchScreen.xib */,
 				1ADF76FF1B2652E100866BB2 /* Supporting Files */,
+				1A14B0BA1B269687009DB701 /* Neat-Bridging-Header.h */,
 			);
 			path = Neat;
 			sourceTree = "<group>";
@@ -118,6 +127,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2D1F931B8A910620B140B424 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F232F38A7B363A0B686548E9 /* Pods-Neat.debug.xcconfig */,
+				288D3299F0259D421267E9FD /* Pods-Neat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		46DB2B60E71E5097D3DD3814 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF9E7B902E14BB9D17F760BB /* libPods-Neat.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1ADF771B1B2652E100866BB2 /* Build configuration list for PBXNativeTarget "Neat" */;
 			buildPhases = (
+				D31D0F6CC33530032F2FB539 /* Check Pods Manifest.lock */,
 				1ADF76F81B2652E100866BB2 /* Sources */,
 				1ADF76F91B2652E100866BB2 /* Frameworks */,
 				1ADF76FA1B2652E100866BB2 /* Resources */,
+				F7B166A177B75CA2E62E0AE0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +241,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D31D0F6CC33530032F2FB539 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F7B166A177B75CA2E62E0AE0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Neat/Pods-Neat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1ADF76F81B2652E100866BB2 /* Sources */ = {
@@ -346,21 +407,28 @@
 		};
 		1ADF771C1B2652E100866BB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F232F38A7B363A0B686548E9 /* Pods-Neat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Neat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Neat/Neat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		1ADF771D1B2652E100866BB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 288D3299F0259D421267E9FD /* Pods-Neat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Neat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Neat/Neat-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -417,6 +485,7 @@
 				1ADF771D1B2652E100866BB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1ADF771E1B2652E100866BB2 /* Build configuration list for PBXNativeTarget "NeatTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +494,7 @@
 				1ADF77201B2652E100866BB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
