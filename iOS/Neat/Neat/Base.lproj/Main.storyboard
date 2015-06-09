@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tyi-ZJ-fdO">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Files-->
+        <scene sceneID="QvT-Pn-4pf">
+            <objects>
+                <tableViewController id="e4F-aX-HNV" customClass="FilesTableViewController" customModule="Neat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yhx-AI-kYD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="filesCell" textLabel="OIN-OH-HwO" style="IBUITableViewCellStyleDefault" id="JMd-hP-7cd">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JMd-hP-7cd" id="JZA-4c-sn6">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OIN-OH-HwO">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="pXA-GR-bQm" kind="show" identifier="FileViewSegue" id="3fz-Bv-PFF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="e4F-aX-HNV" id="UrU-hF-Dfg"/>
+                            <outlet property="delegate" destination="e4F-aX-HNV" id="AeZ-BT-V0A"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Files" id="Xg5-8z-WfD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aMu-nz-TM8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1143" y="571"/>
+        </scene>
+        <!--Filename-->
+        <scene sceneID="cDK-Uu-wJS">
+            <objects>
+                <viewController title="Filename" id="pXA-GR-bQm" customClass="FileViewerViewController" customModule="Neat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K48-g6-itZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q3s-xq-Wtf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8ug-2n-jAp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Files" id="X2k-CK-N7b">
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="VZc-6d-t0k"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="est-tH-TIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1836" y="571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Gdh-wV-fLR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tyi-ZJ-fdO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aQ3-Gs-3Jd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="e4F-aX-HNV" kind="relationship" relationship="rootViewController" id="jBJ-Y1-NP7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hzj-0f-G1V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450" y="571"/>
+        </scene>
+    </scenes>
+</document>
